@@ -1,0 +1,15 @@
+.fl {
+	float: left;
+}
+.fr {
+    float: right;
+}
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    height: 0px;
+    line-height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bulter</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/calendar(dashboard).css">
+</head>
+<body>
+    <div class="home">
+<!-- nav start -->
+        <div class="nav">
+            <div class="logo"><a href="javascript:;">Bulter</a></div>
+            <div class="nav-search">
+                <ul>
+                    <li class="nav-searchBox">
+                        <input type="text" placeholder="搜索"/>
+                        <input type="button" onclick="">
+                    </li>
+                    <li class="nav-searchIcon">
+                        <a href="#notification-link">
+                            <div class="notification">
+                                <div id="notification-counts">4</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-searchIcon">
+                        <a href="javascript:;">
+                            <div class="message">
+                                <div id="message-counts">1</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="user">
+                <b></b>Hi,Robert
+                <i id="userIcon"></i> 
+                <div id="userItems">
+                    <ul>
+                        <li class="user-item"><a href="">Login</a></li>
+                        <li class="user-item"><a href="">Register</a></li>
+                        <li class="user-item"><a href="">Exit</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+<!-- nav end -->
+
+        <div class="bottom clearfix">
+
+<!-- tab start -->
+            <div id="tab">
+                <ul id="tabs">
+                    <li class="current"><i></i>Dashboard<span></span><b></b></li>
+                    <li><i></i>Charts<span></span><b></b></li>
+                    <li><i></i>Tasks<span></span><b></b></li>
+                    <li><i></i>Comment<span></span><b></b></li>
+                    <li><i></i>Mail<span></span><b></b></li>
+                    <li><i></i>Setting<span></span><b></b></li>
+                    <li><i></i>Feedback<span></span><b></b></li>
+                    <li><i></i>Links<span></span><b></b></li>
+                    <li><i></i>Social<span></span><b></b></li>
+                    <li><i></i>Achievement<span></span><b></b></li>
+                    <li><i></i>Logout<span></span><b></b></li>
+                    <li><i></i>Collapse Menu</li>              
+                </ul>
+            </div>
+<!-- tab end -->
+
+<!-- main start -->
+            <div class="main clearfix">
+
+<!-- dashboard page start -->
+                <div id="comment" class="item show">
+                    <div id="comment_news" class="cl">
+                        <ul>
+                            <li><span class="icon"><canvas class="news-count" id="twitter"></canvas><img src="images/update1.png" alt=""/></span>
+                                <span class="news1"><span id="twitter1" >400</span><br>Mentioned</span></li>
+                            <li><span class="icon"><canvas class="news-count" id="sales"></canvas><img src="images/update2.png" alt=""/></span>
+                                <span class="news1"><span id="sales2">13140$</span><br>Today Sales</span></li>
+                            <li><span class="icon"><canvas class="news-count" id="visiters"></canvas><img src="images/update3.png" alt=""/></span>
+                                <span class="news1"><span id="visiters3">9001</span><br>Today Visitors</span></li>
+                            <li><span class="icon"><canvas class="news-count" id="messages"></canvas><img src="images/update4.png" alt=""/></span>
+                                <span class="news1"><span id="messages4">350</span><br>New message</span></li>
+                        </ul>
+                    </div>
+
+                    <script src="js/Dashboard-canvas.js"></script>
+
+                    <div id="comment_form" class="cl">
+                        <div class="comment-form-chart" id="form-chart1"></div>
+                        <div class="comment-form-chart">
+                            <div id="form-chart2"></div>
+                            <div id="form-data">
+                                <ul>
+                                    <li class="sales-data">
+                                        <h3>536,030 $</h3>
+                                        <p>Yearly Sales</p>
+                                        <div><span></span></div>
+                                    </li>
+                                    <li class="visiters-data">
+                                        <h3>4204284</h3>
+                                        <p>Yearly Visitors</p>
+                                        <div><span></span></div>
+                                    </li>
+                                    <li class="customers-data">
+                                        <h3>42000</h3>
+                                        <p>Yearly Customers</p>
+                                        <div><span></span></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="comment_plan" class="cl">
+                        <div id="plan_list">
+                            <div id="list_head">ToDo List<i id="list_add"></i></div>
+                            <ul class="todolist">
+                                <li><b></b>Do your ToDo List today at 6AM GMT<i class="list_delete"></i><i></i></li>
+                                <li><b></b>Do your ToDo List today at 6AM GMT<i class="list_delete"></i><i></i></li>
+                                <li><b></b>Do your ToDo List today at 6AM GMT<i class="list_delete"></i><i></i></li>
+                                <li><b></b>Do your ToDo List today at 6AM GMT<i class="list_delete"></i><i></i></li>
+                            </ul>
+                            <div class="todolist-add">
+                                <input id="list-ct" type="text"/>
+                                <input class="add-bt" id="add-list" type="button" value="Add">
+                                <input class="add-bt" id="cancel-list" type="button" value="Cancel">
+                            </div>
+                        </div>
+                        <div id="plan_date">
+                            <div id="weather">
+                                <img src="images/weather1.png" alt="sun"><span id="tempreture">44°</span><span id="location"></span><i></i>
+                            </div>
+                            <div class="calendar" id="calendar"></div>
+                        </div>
+                    </div>
+                    <div id="comment-data" class="cl"> 
+                        <div id="plan-notifications">
+                            <a name="notification-link">
+                                <div id="notifications-head">Notifications</div>
+                                <ul>
+                                    <li id="notification-twitter"><p>There are <span>5</span> new twitter messages are waiting you for reply them!</p></li>
+                                    <li id="notification-message"><p>There are <span>5</span> new twitter messages are waiting you for reply them!</p></li>
+                                    <li id="notification-sale"><p>There are <span>5</span> new twitter messages are waiting you for reply them!</p></li>
+                                </ul> 
+                            </a>
+                        </div>
+                        <div id="plan-graph"></div>
+                    </div>
+                </div>
+<!-- dashboard page end -->
+
+<!-- charts page start -->
+                <div id="charts" class="item">
+                    <div>
+                        Top Charts <span>heading hear</span>
+                    </div>
+                    <ul>
+                        <li id="chart1"></li>
+                        <li id="chart2"></li>
+                        <li id="chart3"></li>
+                        <li id="chart4"></li>
+                        <li id="chart5"></li>
+                    </ul>
+                </div>
+<!-- charts page end -->
+
+<!-- tasks page start -->
+                <div id="tasks" class="item">
+                    <div class="tasks_top">Task<b id="delete"></b><b id="add"></b></div>
+                    <div class="tasks_bottom">
+                        <ul class="tasks_list clearfix">
+                            <li class="tasks_li">All</li>
+                            <li class="tasks_li">Work</li>
+                            <li class="tasks_li">Home</li>
+                            <li class="tasks_li">Shopping</li>
+                            <li class="tasks_li">Entertainment</li>
+                        </ul>
+                        <ul class="tasks_content clearfix" id="ids">
+                            <li class="tks">Hire Baraa<i></i><br>
+                                <span>Work</span>
+                                <p>Hire Baraa Bilal as CEO for Apple tomorrow at 9PM in the meeting
+                                    at lazi'Cafe in Amman Jordan</p>
+                            </li>
+                            <li class="tks">Visit Mam<i></i><br>
+                                <span>Home</span>
+                                <p>Hire Baraa Bilal as CEO for Apple tomorrow at 9PM in the meeting
+                                    at lazi'Cafe in Amman Jordan</p>
+                            </li>
+                            <li class="tks">Design Logo<i></i><br>
+                                <span>Work</span>
+                                <p>Hire Baraa Bilal as CEO for Apple tomorrow at 9PM in the meeting
+                                    at lazi'Cafe in Amman Jordan</p>
+                            </li>
+                            <li class="tks">Buy a Suit<i></i><br>
+                                <span>Shopping</span>
+                                <p>Hire Baraa Bilal as CEO for Apple tomorrow at 9PM in the meeting
+                                    at lazi'Cafe in Amman Jordan</p>
+                            </li>
+                            <li class="tks">Watch Movie<i></i><br>
+                                <span>Entertainment</span>
+                                <p>Hire Baraa Bilal as CEO for Apple tomorrow at 9PM in the meeting
+                                    at lazi'Cafe in Amman Jordan</p>
+                            </li>
+                        </ul>
+                         <form id="task-form">
+                            <i></i>
+                            <fieldset>
+                                <legend>Build Task</legend>
+                                <label for="task-name">Task Name: </label>
+                                <input type="text" id="task-name"/>
+                                <label>Task Type: </label>
+                                <div class="task-type">
+                                    <input type="radio" name="task" value="Work" checked="checked"/>Work
+                                    <input type="radio" name="task" value="Home"/>Home
+                                    <input type="radio" name="task" value="Shopping"/>Shopping
+                                    <input type="radio" name="task" value="Entertainment"/>Entertainment   
+                                </div>
+                                <label for="task-content">Task Content: </label>
+                                <textarea id="task-content" rows="10" cols="20"></textarea>
+                                <div id="task-button">
+                                    <input id="add-task" type="button" value="add">
+                                    <input id="cancel-add" type="button" value="cancel">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+<!-- tasks page end -->
+
+<!-- wrong page start -->
+                <div id="wrong" class="item">
+                    <div><img src="images/404.png" alt="404"></div>
+                    <p>Sorry dude bad news ,<br>  we cant find your page :(</p>
+                    <p>But, the good news<br>  that you still can jump to the <a href="#">HomePage</a></p>
+                </div>
+<!-- wrong page end -->
+            </div>
+<!-- main end -->
+        </div>
+    </div>
+</body>
+
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/index.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/calendar.js"></script>
+</html>
